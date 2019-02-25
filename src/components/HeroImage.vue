@@ -9,7 +9,7 @@ export default {
 </script>
 
 <style scoped>
-  .heroImage{
+  .heroImage {
     position: fixed;
     top: 0;
     z-index: -1;

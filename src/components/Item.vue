@@ -23,14 +23,14 @@ export default {
     },
   },
 
-  mounted(){
+  mounted() {
     this.photo = this.item.links[0].href;
   },
 };
 </script>
 
 <style lang="scss" scoped>
-  .item{
+  .item {
     min-width: 40vw;
     height: 250px;
     background-size: cover;

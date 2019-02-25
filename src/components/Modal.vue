@@ -33,7 +33,7 @@ export default {
       description: null,
     };
   },
-  mounted(){
+  mounted() {
     this.photo = this.item.links[0].href;
     this.title = this.item.data[0].title;
     this.description = this.item.data[0].description.substring(0, 256);
@@ -72,7 +72,7 @@ export default {
     cursor: pointer;
 
     &::before,
-    &::after{
+    &::after {
       top: 20px;
       right: 20px;
       position: absolute;
@@ -87,12 +87,12 @@ export default {
       transform: rotate(45deg);
     }
 
-    &::after{
+    &::after {
       transform: rotate(-45deg);
     }
   }
 
-  .innerWrapper{
+  .innerWrapper {
     display: flex;
     height: 100%;
     padding: 50px;
@@ -101,7 +101,7 @@ export default {
     flex-direction: column;
 
 
-    @media(min-width: 1024px){
+    @media(min-width: 1024px) {
       flex-direction: row;
 
       .photo {
@@ -111,17 +111,17 @@ export default {
     }
   }
 
-  .photo{
+  .photo {
     max-width: 90%;
     height: auto;
     background: black;
   }
 
-  img{
+  img {
     width: 100%;
   }
 
-  .description{
+  .description {
     color: #333;
   }
 </style>

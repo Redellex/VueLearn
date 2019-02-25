@@ -8,7 +8,9 @@
     <Claim v-if="step === 0"/>
     <SearchInput v-model="searchValue" @input="handleInput" :dark="step === 1"/>
     <div class="results" v-if="results && !loading && step === 1">
-      <Item v-for="item in results" :item="item"  :key="item.data[0].nasa_id" @click.native="handleModalOpen(item)"/>
+      <Item v-for="item in results"
+            :item="item"  :key="item.data[0].nasa_id"
+            @click.native="handleModalOpen(item)"/>
     </div>
     <div class="lds-ellipsis" v-if="step ===1 && loading"/>
     <Modal v-if="modalOpen" :item="modalItem" @closeModal="modalOpen = false"/>
@@ -24,6 +26,7 @@ import SearchInput from '@/components/SearchInput.vue';
 import HeroImage from '@/components/HeroImage.vue';
 import Item from '@/components/Item.vue';
 import Modal from '@/components/Modal.vue';
+
 const API = 'https://images-api.nasa.gov';
 
 export default {
@@ -35,7 +38,7 @@ export default {
     Item,
     Modal,
   },
-  data(){
+  data() {
     return {
       modalItem: null,
       modalOpen: false,
@@ -46,15 +49,14 @@ export default {
     };
   },
 
-  methods:{
-    handleModalOpen(item){
+  methods: {
+    handleModalOpen(item) {
       this.modalOpen = true;
       this.modalItem = item;
     },
 
-    handleInput: debounce(function() {
+    handleInput: debounce(function () {
       this.loading = true;
-      console.log(this.searchValue);
       axios.get(`${API}/search?q=${this.searchValue}&media_type=image`)
         .then((response) => {
           this.results = response.data.collection.items;

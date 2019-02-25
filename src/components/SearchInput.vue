@@ -30,7 +30,7 @@ export default {
 </script>
 
 <style scoped>
-  label{
+  label {
     font-family: Montserrat, sans-serif;
   }
   input{
@@ -59,7 +59,7 @@ export default {
     border-bottom-color: #1e3d4a;
   }
 
-  .dark:focus{
+  .dark:focus {
     box-shadow: 0 10px 20px -8px rgba(#1e3d4a, .2);
   }
 </style>
