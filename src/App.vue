@@ -64,6 +64,7 @@ export default {
           this.step = 1;
         })
         .catch((error) => {
+          // eslint-disable-next-line
           console.log(error);
         });
     }, 500),

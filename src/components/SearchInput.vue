@@ -11,8 +11,8 @@
 <script>
 export default {
   name: 'SearchInput',
-  props:{
-    value:{
+  props: {
+    value: {
       type: String,
       required: true,
     },
@@ -21,8 +21,8 @@ export default {
       default: false,
     },
   },
-  methods:{
-    handleChange(e){
+  methods: {
+    handleChange(e) {
       this.$emit('input', e.target.value);
     },
   },

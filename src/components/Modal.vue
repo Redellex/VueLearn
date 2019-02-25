@@ -26,7 +26,7 @@ export default {
       required: true,
     },
   },
-  data(){
+  data() {
     return {
       photo: null,
       title: null,
@@ -37,7 +37,7 @@ export default {
     this.photo = this.item.links[0].href;
     this.title = this.item.data[0].title;
     this.description = this.item.data[0].description.substring(0, 256);
-  }
+  },
 };
 </script>
 
